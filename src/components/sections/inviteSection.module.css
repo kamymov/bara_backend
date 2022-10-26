@@ -1,0 +1,128 @@
+.invite {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    margin-top: -8%;
+}
+
+
+.invite::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1225px;
+    background: url('../../assets/blue-bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    z-index: -1;
+}
+
+
+.inviteTitle {
+    margin-top: 20%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 100%;
+}
+
+.inviteTitle span {
+    color: rgba(254,213,66,1);
+    font-weight: bolder;
+    font-size: 2vw;
+}
+.inviteTitle h2 {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-top: 1%;
+}
+.pContainer {
+    color: rgb(196, 196, 196);
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 1.5vw;
+}
+
+.inviteButtons {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.inviteButtons Button {
+    font-size: 125%;
+    width: 100%;
+    height: 200%;
+    font-family: iranyekan;
+    font-weight: 1000;
+    border-radius: 13px;
+    margin: 0 5px;
+}
+
+@media (max-width: 900px) {
+    .invite {
+        justify-content: center;
+        margin-top: 90%;
+    }
+    .invite::before { 
+        background-image: url('../../assets/blue-bg-mob.png');
+        width: 100%;
+        height: 2050px;
+        background-position: center;
+    }
+    .inviteTitle {
+        width: 100%;
+        margin-top: -60%;
+    }
+    .inviteTitle h2 {
+        font-size: 5vw;
+        margin: 5% 0;
+    }
+    .inviteTitle span {
+        font-size: 3vw;
+    }
+    .pContainer {
+        font-size: 3vw;
+        width: 70%;
+        margin-bottom: 20%;
+    }
+    .inviteButtons {
+        flex-direction: column;
+        margin-top: 5%;
+        width: 80%;
+    }
+    .inviteButtons Button {
+        margin-top: 3%;
+        padding: 4vw 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .invite::before {
+        height: 1000px;
+    }
+    .inviteTitle {
+        margin-top: -50%;
+    }
+    .inviteTitle span {
+        font-size: 4vw;
+    }
+    .inviteTitle h2 {
+        font-size: 5.5vw;
+    }
+    .pContainer {
+        font-size: 4vw;
+    }
+}

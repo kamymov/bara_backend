@@ -1,0 +1,51 @@
+.zoneContainer {
+    margin: 0 auto;
+    width: 90%;
+}
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 90%;
+    height: 90%;
+    margin-top: -8%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.fristLeft {
+    margin-right: -40%;
+}
+
+.secondLeft {
+    margin-left: -40%;
+}
+
+.thirdLeft {
+    margin-right: -40%;
+}
+
+
+.fristRight{
+    margin-left: -40%;
+}
+
+.secondRight {
+    margin-right: -40%;
+}
+
+.thirdRight {
+    margin-left: -40%;
+}
+
+
+@media (max-width: 900px) {
+    .image {
+        scale: 0.8;
+    }
+    
+}

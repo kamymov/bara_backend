@@ -1,0 +1,102 @@
+body {
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.bannerSection {
+    width: 100vw;
+}
+
+.cardsSection {
+    width: 100vw;
+}
+
+.playSection {
+    width: 100vw;
+}
+
+.inviteSection {
+    width: 100vw;
+}
+.zoneSection {
+    width: 100vw;
+}
+.videoSection {
+    width: 100vw;
+}
+.investorsSection {
+    width: 100vw;
+}
+
+.teamSection {
+    width: 100vw;
+}
+.partners {
+    width: 100%;
+    margin: 0 auto;
+}
+.partnersSection {
+    width: 100vw;
+}
+
+@media (max-width: 900px) {
+    .invite::before {
+        background: url('../assets/blue-bg-mob.png');
+        background-size: contain;
+        background-size: 105%;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .inviteTitle {
+        margin-top: 45%;
+        width: 90%;
+        font-size: 2.5vw;
+    }
+    .inviteTitle h2 {
+        font-size: 6vw;
+        margin-top: 2%;
+    }
+    .inviteButtons {
+        margin: 20px 0;
+        width: 100%;
+        flex-direction: column;
+        height:200px ;
+        justify-content:flex-start;
+    }
+    .inviteButtons Button {
+        width: 60vw;
+        height: 10vw;
+        margin-bottom: 2vw;
+    }
+    .zoneTitle {
+        margin-bottom: 10%;
+    }
+    .playVideo {
+        min-height: 100%;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .newsImage {
+        height: 40vh;
+    }
+    .newsTitle {
+        font-size: 150%;
+    }
+    .currentImage {
+        animation: second 10s linear infinite;
+    }
+    .banner h1 {
+        font-size: 7vw;
+    }
+    .banner::before {
+        margin-top: 23vh;
+    }
+
+    
+}

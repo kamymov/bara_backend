@@ -1,0 +1,120 @@
+.navBarContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: rgb(230, 230, 230);
+    height: 13vh;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 10%;
+    scale: 0.7;
+}
+.walletIcon {
+    width: 75%;
+}
+.walletItemContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    width: 150px;
+}
+.walletItems {
+    width: 30%;
+    margin-left: 10%;
+}
+.walletItemContainer span {
+    font-weight: bolder;
+    margin-top: 4%;
+    font-size: 120%;
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 54%;
+}
+
+.links {
+    list-style: none;
+    font-size: large;
+    font-weight: bold;
+    transition: transform 0.6s ease;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+
+}
+.links:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color:rgba(252,198,1,1) ;
+}
+.socialContainer {
+    width: 12%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2%;
+}
+.social {
+    width: 90%;
+    margin-top: 30%;
+    transition: transform 0.9s ease;
+}
+.social:hover {
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.2);
+}
+.responsiveMenu {
+    display: none;
+}
+
+.metamaskShow {
+    display: flex;
+}
+.metamaskHide {
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    .navBarContainer {
+        height: 11vh;
+    }
+    .linksContainer {
+        display: none;
+    }
+    .socialContainer {
+        display: none;
+    }
+    .responsiveMenu {
+        display: flex;
+        position: absolute; 
+        left: 5%; 
+    }
+    .logo {
+        margin-top: 0.3%;
+        position: absolute;
+        width: 15%;
+    }
+    .wallet {
+        position: absolute;
+        right: 4%;
+    }
+    .signinBtn {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .logo {
+        width: 25%;
+    }
+}

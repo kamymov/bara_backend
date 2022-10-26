@@ -1,0 +1,51 @@
+.investorsContainer{
+    height: 350px;
+}
+.investorsContainer::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/bg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    margin-top: -15%;
+    position: absolute;
+    z-index: -2;
+    filter: brightness(1.5);
+}
+.investorsTitle {
+    color: #fff;
+    text-align: center;
+    font-size: 250%;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+.logo {
+    width: 170px;
+    margin: 0 4.5vw;
+    filter:saturate(0) brightness(2);
+    transition: all 0.4s ease;
+}
+.logo:hover {
+    scale: 1.1;
+}
+
+@media (max-width:600px) {
+    .investorsContainer {
+        height: 200px;
+    }
+    .logo{
+        width: 80px;
+        margin: 0 3vw;
+    }
+    .investorsContainer::before {
+        background-position: top;
+        margin-top: 20%;
+    }
+}

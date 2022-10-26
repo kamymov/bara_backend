@@ -1,0 +1,44 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 160%;
+    background-image: url('../../assets/heroGIF.gif');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 120%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.banner h1 {
+    color: rgb(234, 199, 0);
+    background: linear-gradient(90deg, #FFDC5E 0%,#FC9701 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4vw;
+    margin-top: 14vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    margin-top: -5%;
+    margin-bottom: 10%;
+}
+
+@media (max-width:600px) {
+    .banner h1 {
+        font-size: 7vw;
+    }
+    
+}
