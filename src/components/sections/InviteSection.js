@@ -20,14 +20,14 @@ const InviteSection = () => {
             <div className={styles.inviteButtons}>
                 <Button className={styles.inviteButton} size='large' variant="contained" sx={{
                     color: 'black',
-                    background: 'linear-gradient(90deg, rgba(255,227,126,1) 0%, rgba(254,213,66,1) 35%, rgba(252,198,1,1) 100%)',
+                    background: 'linear-gradient(90deg, rgba(255,227,126,1) 0%, rgba(254,213,66,1) 35%, #e801b4 100%)',
                     fontFamily: 'PeydaBlack, Arial, Helvetica, sans-serif',
                     height: {sm: "500px"}
                 }}>
                     دعوت به بارا
                 </Button>
                 <Button className={styles.demoButton} size='large' variant="outlined" sx={{
-                    border: '1.5px solid rgba(252,198,1,1)',
+                    border: '1.5px solid #e801b4',
                     color: '#fff',
                     opacity: '0.8',
                     fontFamily: 'PeydaBlack, Arial, Helvetica, sans-serif'

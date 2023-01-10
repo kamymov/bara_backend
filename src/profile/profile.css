@@ -1,0 +1,35 @@
+.Profile_main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.Profile_form{
+    width: 70%;
+    margin: 6% auto;
+    padding: 10px;
+}
+
+.Profile_input{
+    width: 60%;
+    display: block;
+    margin: 1% auto;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Profile_label{
+    margin: 2% 20% 0 0;
+    letter-spacing: 1px;
+}
+
+.Profile_btn{
+    width: 200px;
+    margin: auto;
+    display: block;
+    background-color: rgb(0, 179, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}

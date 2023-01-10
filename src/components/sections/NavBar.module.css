@@ -15,6 +15,7 @@
 .logo {
     width: 10%;
     scale: 0.7;
+    cursor: pointer;
 }
 .walletIcon {
     width: 75%;
@@ -55,16 +56,16 @@
 .links:hover {
     cursor: pointer;
     transform: scale(1.1);
-    color:rgba(252,198,1,1) ;
+    color: #e801b4;
 }
 .socialContainer {
-    width: 12%;
+    width: 11%;
     display: flex;
     justify-content: space-evenly;
     margin-right: 2%;
 }
 .social {
-    width: 90%;
+    width: 65%;
     margin-top: 30%;
     transition: transform 0.9s ease;
 }
@@ -83,8 +84,18 @@
     display: none;
 }
 
+.profilePhoto{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 30px;
+    cursor: pointer;
+}
 
 @media (max-width: 900px) {
+    .profilePhoto{
+        display: none;
+    }
     .navBarContainer {
         height: 11vh;
     }

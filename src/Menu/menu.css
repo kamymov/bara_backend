@@ -1,0 +1,64 @@
+.menu{
+    width: 100%;
+    padding: 10px;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: 2;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.menu_logo_div{
+    width: 20%;
+}
+
+.bara_logo{
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.menu_div_link{
+    width: 50%;
+    display: flex;
+}
+
+.menu_profile_div{
+    width: 30%;
+}
+
+.menu_link{
+    text-decoration: none;
+    color: black;
+    margin: 20px 0;
+    display: block;
+    transition: 0.5s;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu_link:hover{
+    color: red;
+}
+
+.profile_img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .menu_link{
+        font-size: small;
+        width: 200px;
+    }
+}

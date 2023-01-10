@@ -1,0 +1,52 @@
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .search {
+    width: 100%;
+  }
+  .container select {
+    width: 100% !important;
+    margin-top: 2rem;
+  }
+  .cheaps {
+    display: none;
+  }
+
+  .box header {
+    display: none !important;
+  }
+  .MuiBox-root {
+    padding: 1rem !important;
+  }
+  .MuiButtonBase {
+    display: none;
+  }
+  .main-title {
+    display: none;
+  }
+  .detail {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .companyDetail header {
+    flex-direction: column;
+  }
+  .MuiButton-containedSuccess {
+    display: none !important;
+  }
+  .mobile-cvSender {
+    display: flex !important;
+    width: 100%;
+    color: #fff;
+    background-color: #45c26f;
+    border: 1px solid #45c26f;
+    border-radius: 5px;
+    padding: 1rem 5rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+}

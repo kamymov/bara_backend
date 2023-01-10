@@ -92,7 +92,7 @@
     scale: 2.3;
 }
 .containedButton {
-    background: linear-gradient(90deg, rgba(255,227,126,1) 0%, rgba(254,213,66,1) 35%, rgba(252,198,1,1) 100%);
+    background: linear-gradient(90deg, #e802b4,#e802b4 35%,#900d9f);
 }
 
 

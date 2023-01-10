@@ -1,0 +1,49 @@
+.uploadInvMain{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    margin: 5% auto;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.UInv_title{
+    text-align: center;
+}
+
+.UInv_input{
+    border: 2px solid black;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    width: 40%;
+    margin: 10px auto;
+    display: block;
+    direction: rtl;
+    font-size: large;
+    transition: 1s;
+}
+
+.UInv_input:focus{
+    border: 2px solid red;
+}
+
+.UInv_label{
+    margin-right: 29.5%;
+    margin-top: 3%;
+    display: block;
+}
+
+.UInv_submit{
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    font-size: large;
+    margin: 2% auto 1% auto;
+    display: block;
+    width: 100px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+}

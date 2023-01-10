@@ -1,0 +1,37 @@
+.CS_main{
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.CS_div_title{
+    width: 100%;
+    margin-top: 4.6%;
+}
+
+.CS_div_title h1{
+    text-align: center;
+}
+
+.CS_div_scalers{
+    width: 100%;
+    margin: 2% auto;
+}
+
+.CS_div_scaler{
+    width: 70%;
+    background-color: rgb(201, 201, 201);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(123, 123, 123);
+    margin: 3% auto;
+    cursor: pointer;
+}
+
+.CS_div_scaler a{
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;
+}

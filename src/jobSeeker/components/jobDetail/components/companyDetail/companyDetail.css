@@ -1,0 +1,8 @@
+.companyDetail header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.companyDetail span {
+    font-weight: bolder;
+}

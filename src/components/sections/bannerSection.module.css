@@ -20,10 +20,8 @@
 }
 
 .banner h1 {
-    color: rgb(234, 199, 0);
-    background: linear-gradient(90deg, #FFDC5E 0%,#FC9701 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #e801b4;
+    background: black;
     font-size: 4vw;
     margin-top: 14vh;
     margin-bottom: 5vh;

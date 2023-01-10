@@ -1,10 +1,13 @@
 import { FaDiscord, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import {Link, useNavigate} from 'react-router-dom'
 import styles from './Login.module.css'
 import { Button } from "@mui/material";
 import { useState } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 function Login() {
-
+  const navigate = useNavigate()
   const [userData, setUserData] = useState({
     number: '',
     password: ''
@@ -16,8 +19,19 @@ function Login() {
     setUserData({...userData, password: event.target.value})
   }
 
-  const logger = () => {
-    console.log(userData)
+  const login = () => {
+    axios.post("https://api.barainvest.com/auth/login", userData).then(response => {
+      if(!response.data.status){
+              if(response.data.status !== 200){
+        Swal.fire('ارور', response.data.message, 'error')
+      }
+      Swal.fire('ورود', 'خوش آمدید', 'success')
+      localStorage.setItem('token', response.data.token)
+      return navigate('/matching')
+      }else{
+        new Swal('ارور' , response.data.message , 'error')
+      }
+    })
   }
 
   return (
@@ -42,24 +56,24 @@ function Login() {
             </div>
             <div className={styles.buttonContainer}>
                 <Button variant="outlined" sx={{
-                    border: '1.5px solid rgba(252,198,1,1)',
+                    border: '1.5px solid #e801b4',
                     borderRadius: '13px',
-                    color: '#fff',
+                    color: 'white',
                     fontSize: '150%',
                     padding: '2% 10%',
                     width: {xs: '70%', md: '50%'},
                     fontFamily: 'PeydaBlack, Arial, Helvetica, sans-serif',
                     backgroundColor: 'rgba(0, 0, 0, 0.4)',
                     ":hover": {
-                        border: '1.5px solid rgba(255,227,126,1)'
+                        border: '1.5px solid #e801b4'
                     }
                 }}
-                onClick={logger}
+                onClick={login}
                 >
                   ورود
                 </Button>
             </div>
-            <h5 className={styles.loginWith}>ثبت نام از طریق</h5>
+            {/* <h5 className={styles.loginWith}>ثبت نام از طریق</h5> */}
             <div className={styles.iconContainer}>
                 <FaDiscord />
                 <FaLinkedin />
@@ -68,7 +82,7 @@ function Login() {
             </div>
             <div className={styles.forgotPassAndLogin}>
                 <span className={styles.forgotPass}>فراموشی رمز</span>
-                <a href="./signup" className={styles.loginLink}>ثبت نام در دنیای بارا</a>
+                <Link to={"/signup"} className={styles.loginLink}>ثبت نام در دنیای بارا</Link>
             </div>
         </div>
     </div>

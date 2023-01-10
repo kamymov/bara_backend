@@ -1,0 +1,36 @@
+.title {
+  display: flex;
+}
+.detail {
+  display: flex;
+}
+.detail div {
+  margin-left: 3rem;
+}
+.jobSituation {
+  display: flex;
+}
+.jobSituation h3 {
+  border: 1px solid #f8f9fa;
+  background-color: #f8f9fa;
+}
+.jobSituation p {
+  border: 1px solid #5c6573;
+  background-color: #5c6573;
+  border-radius: 5px;
+  color: white;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.indicator main {
+  display: flex;
+  align-items: center;
+}
+.indicator p {
+  margin-right: 5px;
+}
+.mobile-cvSender {
+  display: none;
+}

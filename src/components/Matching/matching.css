@@ -1,0 +1,55 @@
+body{
+    align-items: unset;
+}
+
+.main2{
+    width: 80%;
+    margin: 2% auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.title_div{
+    width: 60%;
+    margin: auto;
+}
+
+.title2{
+    text-align: center;
+    color: black;
+}
+
+.img_details_div{
+    width: 70%;
+    margin: 2% auto;
+    min-height: 600px;
+}
+
+.img_details{
+    width: 90%;
+    margin: 5% auto;
+    display: block;
+}
+
+.invesment_type_input{
+    width: 60%;
+    border: none;
+    padding: 10px 5px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.description_input{
+    width: 60%;
+    border: none;
+    padding: 10px 5px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid black;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline: none;
+}

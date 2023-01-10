@@ -85,7 +85,7 @@ const PlaySection = () => {
                                     <Grid item xs={10} md={6}>
                                         <Button className={styles.containedButton} variant="contained" sx={{
                                             borderRadius: '13px',
-                                            color: 'black',
+                                            color: 'white',
                                             fontSize: '120%',
                                             padding: '4% 15%',
                                             width: '90%',
@@ -97,7 +97,7 @@ const PlaySection = () => {
                                     </Grid>
                                     <Grid item xs={10} md={6}>
                                         <Button className={styles.outlineButton} variant="outlined" sx={{
-                                            border: '1.5px solid rgba(252,198,1,1)',
+                                            border: '1.5px solid #e802b4',
                                             borderRadius: '13px',
                                             color: '#fff',
                                             fontSize: '120%',
@@ -107,7 +107,7 @@ const PlaySection = () => {
                                             fontFamily: 'PeydaBlack, Arial, Helvetica, sans-serif',
                                             // backgroundColor: 'rgba(0, 0, 0, 0.4)',
                                             ":hover": {
-                                                border: '1.5px solid rgba(255,227,126,1)'
+                                                border: '1.5px solid #900d9f'
                                             }
                                         }}>
                                             ورود سرمایه گذار

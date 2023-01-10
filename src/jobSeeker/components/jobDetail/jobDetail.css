@@ -1,0 +1,44 @@
+.jobDetailContainer {
+  padding: 10px 1rem;
+}
+
+.jobDetailContainer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jobDetailContainer address {
+  margin-top: 5px;
+}
+
+.jobDetailContainer .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.main-title {
+  color:rgb(180, 180, 243);
+  text-align: center;
+}
+.choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.choose img {
+  width: 50%;
+  margin: auto;
+}
+
+.poster{
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+.game_poster_img{
+  width: 100%;
+  height: 200px;
+}

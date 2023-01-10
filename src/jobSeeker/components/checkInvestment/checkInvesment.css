@@ -1,0 +1,25 @@
+.CI_main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.CI_invesments{
+    width: 80%;
+    margin: 5% auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+.CI_invesments h1{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.CI_Link{
+    text-decoration: none;
+}

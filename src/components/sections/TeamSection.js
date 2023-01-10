@@ -10,40 +10,40 @@ import { Grid } from '@mui/material';
 import styles from './teamSection.module.css'
 
 //image
-import emadAvatar from '../../assets/emad.png'
+import kamyabAvatar from '../../assets/kamyab.png'
 import parsaAvatar from '../../assets/parsa.png'
-import mohadeseAvatar from '../../assets/mohadese.png'
+import nushinAvatar from '../../assets/nushin.png'
 import mohamadAvatar from '../../assets/mohamad.png'
 import mehraAvatar from '../../assets/mehra.png'
 
 const members = [
     {
-        name: 'مهرا افلاطونی',
-        title: 'مدیر محصول',
+        name: 'Mehra Aflatooni',
+        title: 'Product Manager',
         linkedin: '#',
         avatar: mehraAvatar
     },
     {
-        name: 'پارسا ابوالحسنی راد',
-        title: 'سرپرست تیم',
+        name: 'Parsa Abolhasani Rad',
+        title: 'Blockchain Developer',
         linkedin: 'https://www.linkedin.com/in/parsa-abolhasani-203b79198/',
         avatar: parsaAvatar
     },
     {
-        name: 'محدثه افسر',
-        title: 'گرافیست',
-        linkedin: 'https://www.linkedin.com/in/mohadese-afsar/',
-        avatar: mohadeseAvatar
+        name: 'Nushin Taheri',
+        title: 'Graphic Designer and Content Production',
+        linkedin: 'https://www.linkedin.com/in/dsasd/',
+        avatar: nushinAvatar
     },
     {
-        name: 'عماد چشم آذر',
-        title: 'برنامه نویس',
+        name: 'Kamyab Movahhedi',
+        title: 'Software Engineer',
         linkedin: 'https://www.linkedin.com/in/emad-cheshmazar-b4571524a/',
-        avatar: emadAvatar
+        avatar: kamyabAvatar
     },
     {
-        name: 'محمد سیمری',
-        title: 'سرپرست تولید محتوا',
+        name: 'Mohammad Seymari',
+        title: 'Content Production Supervisor',
         linkedin: '#',
         avatar: mohamadAvatar
     },

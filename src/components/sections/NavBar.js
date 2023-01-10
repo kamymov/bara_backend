@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import * as Swal from 'sweetalert2';
 
 import {Link} from 'react-scroll'
+
+import profile from '../../assets/noneProfile.png';
 
 //MUI
 import { Avatar, Button, IconButton, Menu, MenuItem } from '@mui/material';
@@ -19,6 +22,7 @@ import metamask from '../../assets/metamask.svg'
 
 //styles
 import styles from './NavBar.module.css'
+import axios from 'axios';
 
 const navLinks = [
   {
@@ -96,6 +100,7 @@ const NavBar = () => {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [anchormenu, setanchormenu] = React.useState(null);
+    const [photo , setPhoto] = React.useState('')
 
     const open = Boolean(anchorEl);
 
@@ -115,6 +120,14 @@ const NavBar = () => {
       navigate('/login')
     }
 
+    useEffect(() => {
+      axios.get('https://api.barainvest.com/users/get-user-by-id', {
+        headers: { Authorization: `${localStorage.getItem('token')}` }
+      }).then(response => {
+        setPhoto(response.data.image)
+      })
+    }, [])
+
     async function getMetamaskAccount() {
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
@@ -133,6 +146,10 @@ const NavBar = () => {
         })
         console.log(metamaskAddress)
       }
+    }
+
+    const Logout = () => {
+      return navigate('/matching')
     }
     
     return (
@@ -203,8 +220,10 @@ const NavBar = () => {
                     ))
                 }
             </div>
-            <Button className={styles.signinBtn} variant="outlined" sx={{
-                border: '2px solid rgba(252,198,1,1)',
+
+            { localStorage.getItem('token') == null ?            
+             <Button className={styles.signinBtn} variant="outlined" sx={{
+                border: '2px solid #e801b4',
                 borderRadius: '13px',
                 color: '#fff',
                 fontSize: '100%',
@@ -213,14 +232,15 @@ const NavBar = () => {
                 width: '10%',
                 mr:'1%',
                 ":hover": {
-                    border: '2px solid rgba(255,227,126,1)'
+                    border: '3px solid #e801b4'
                 },
                 display: {xs: 'none', md: 'flex'}
             }}
             onClick={navigateToLogin}
             >
                ورود | ثبت نام
-            </Button>
+            </Button> : <img className={styles.profilePhoto} src={localStorage.getItem('token') ? `https://api.barainvest.com/${photo}` : profile} alt='profile photo' onClick={Logout}/>}
+
             <div className={styles.responsiveMenu}>
             <IconButton
                 size="large"
@@ -260,8 +280,9 @@ const NavBar = () => {
                     mt: '3%',
                     color: 'black',
                     fontFamily: 'PeydaBold, PeydaBlack ,Arial, Helvetica, sans-serif',
-                    background: 'linear-gradient(90deg, rgba(255,227,126,1) 0%, rgba(254,213,66,1) 35%, rgba(252,198,1,1) 100%)'
+                    backgroundColor: '#e801b4'
                   }}
+                  onClick={navigateToLogin}
                   >
                     ورود | ثبت نام
                   </Button>

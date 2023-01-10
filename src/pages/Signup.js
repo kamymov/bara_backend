@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { FaDiscord, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import styles from './signup.module.css'
 import { Button } from "@mui/material";
+import * as Swal from 'sweetalert2'
 
 
 
 function Signup() {
 
+  const navigate = useNavigate()
+
   const [userData, setUserData] = useState({
     number: '',
     password: '',
+    code: ''
   })
 
-  const [smsCode, setSmsCode] = useState('')
+  const [smsCode, setSmsCode] = useState(false)
 
   const getNumber = (event) => {
     setUserData({...userData, number: event.target.value})
-    console.log('its working')
+  }
+
+  const getCode = (event) => {
+    setUserData({...userData, code: event.target.value})
   }
 
   const getPassword = (event) => {
@@ -25,8 +33,40 @@ function Signup() {
   }
 
   const getSms = () => {
-    console.log(userData)
-    setSmsCode('123')
+    axios.post("https://api.barainvest.com/auth/send_code", userData).then((response) => {
+            if(response.status == 201){
+                Swal.fire(
+                    'کد تایید',
+                    'کد تایید برای شما ارسال شد',
+                    'success'
+                  )
+                  setSmsCode(true);
+            }
+    }).catch((err) => {
+        Swal.fire(
+            'ناموفق',
+            err.response.data.message,
+            'error'
+        )
+    })
+  }
+
+  const signUp = () => {
+    axios.post("https://api.barainvest.com/auth/sign-up", userData).then((response) => {
+        if(!response.data.status){
+                new Swal.fire('موفق', 'ثبت نام شما موفقیت آمیز بود', 'success')
+                localStorage.setItem('token', response.data.token)
+                return navigate('/matching')
+        }else{
+            new Swal('ارور', response.data.message, 'error')
+        }
+    }).catch((err) => {
+        Swal.fire(
+            'ناموفق',
+            err.response.data.message,
+            'error'
+        )
+    })
   }
 
   return (
@@ -37,10 +77,17 @@ function Signup() {
                 <div className={smsCode ? styles.inputsContainer : styles.telContainer}>
                     <input
                         className={styles.input} 
-                        type="number" 
+                        type="text" 
                         placeholder="شماره تماس" 
                         onChange={getNumber}
                         value={userData.number}
+                    />
+                                      <input
+                        className={smsCode ? styles.sms : styles.hideSms} 
+                        type="number" 
+                        placeholder="_ _ _ _" 
+                        onChange={getCode}
+                        value={userData.code}
                     />
                     <input
                         className={smsCode ? styles.pass : styles.hidePass} 
@@ -49,18 +96,12 @@ function Signup() {
                         onChange={getPassword}
                         value={userData.password}
                     />
-                    <input
-                        className={smsCode ? styles.sms : styles.hideSms} 
-                        type="number" 
-                        placeholder="_ _ _ _" 
-                        onChange={getSms}
-                        value={smsCode}
-                    />
+  
                 </div>
             }
             <div className={styles.buttonContainer}>
                 <Button variant="outlined" sx={{
-                    border: '1.5px solid rgba(252,198,1,1)',
+                    border: '1.5px solid #e801b4',
                     borderRadius: '13px',
                     color: '#fff',
                     fontSize: '140%',
@@ -69,16 +110,16 @@ function Signup() {
                     fontFamily: 'PeydaBlack, Arial, Helvetica, sans-serif',
                     backgroundColor: 'rgba(0, 0, 0, 0.4)',
                     ":hover": {
-                        border: '1.5px solid rgba(255,227,126,1)'
+                        border: '1.5px solid #e801b4'
                     }
                 }}
-                onClick={getSms}
+                onClick={smsCode ? signUp : getSms}
                 >
-                    ارسال کد
+                    {smsCode ? 'ثبت نام' : 'ارسال کد'}
                 </Button>
             </div>
             <div className={styles.linksContainer}>
-                <h5 className={styles.loginWith}>ثبت نام از طریق</h5>
+                {/* <h5 className={styles.loginWith}>ثبت نام از طریق</h5> */}
                 <div className={styles.iconContainer}>
                     <FaDiscord />
                     <FaLinkedin />
@@ -86,7 +127,7 @@ function Signup() {
                     <FaTwitter />
                 </div>
                 <div className={styles.forgotPassAndLogin}>
-                    <a href="./login" className={styles.loginLink}>ورود به دنیای بارا</a>
+                    <Link to={"/login"} className={styles.loginLink}>ورود به دنیای بارا</Link>
                 </div>
             </div>
         </div>

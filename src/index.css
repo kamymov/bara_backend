@@ -57,6 +57,7 @@ span {
 body {
   font-family: PeydaNormal, PeydaBold, PeydaBlack ,Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  background-color: black;
 }
 
 html {

@@ -1,0 +1,22 @@
+.companypPic {
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+.first-col {
+  display: flex;
+  flex-direction: column;
+}
+.second-col {
+  display: flex;
+  flex-direction: column;
+}
+.first-col span {
+  font-weight: normal;
+}
+.footer-content h5 {
+  color: #5c6573;
+}

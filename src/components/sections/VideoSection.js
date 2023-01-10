@@ -43,7 +43,7 @@ const VideoSection = () => {
             <div className={styles.buttonContainer}>
                 <Button className={styles.containedButton} variant="contained" sx={{
                     borderRadius: '13px',
-                    color: 'black',
+                    color: 'white',
                     fontSize: '80%',
                     width: '100%',
                     padding: '7px 25px',
